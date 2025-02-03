@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mouhamadou F. Ball - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Mouhamadou F. Ball</h1>
+    <p>PhD Student & Researcher</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#bio">Bio</a></li>
+      <li><a href="#formation">Formation</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#certificates">Awards</a></li>
+      <li><a href="#papers">Papers</a></li>
+      <li><a href="#sponsors">Collaborators</a></li>
+      <li><a href="#carousel">Gallery</a></li>
+    </ul>
+  </nav>
+
+  <section id="bio">
+    <h2>Bio</h2>
+    <p>
+        Hello! I am Mouhamadou F. Ball, a dedicated researcher and PhD student specializing in model-based risk analysis of complex systems. My doctoral research focuses on leveraging digital twin technology to enhance the resilience of swarm-configured systems. I am deeply committed to advancing knowledge in my field and contributing to impactful scientific discoveries that address real-world challenges.
+    </p>
+  </section>
+
+  <section id="formation">
+    <h2>Formation</h2>
+    <ul>
+      <li>
+        <strong>PhD in Computer Science</strong><br>
+        ENSTA | Institut Polytechnique de Paris, 2024 - Present<br>
+        Thesis: <i>Towards a Digital Twin-Driven Approach for Multi-Level Analysis and Resilience Improvement of Complex Systems</i>
+      </li>
+      <li>
+        <strong>Engineer Degree in Network and Telecommunications</strong><br>
+        Ecole Supérieure Polytechnique de Dakar, 2023<br>
+        Dissertation: <i>Low-Cost Water Quality Monitoring System Based on LPWAN</i>
+      </li>
+      <li>
+        <strong>DUT in Network and Telecommunications</strong><br>
+        Ecole Supérieure Polytechnique de Dakar, 2020<br>
+        Dissertation: <i>Designing LoRaWAN RF for Embedded Systems</i>
+      </li>
+    </ul>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <ul>
+      <li>
+        <strong>Teaching Assistant</strong><br>
+        ENSTA | Institut Polytechnique de Paris, 2024 - Present<br>
+        Responsibilities: <i>GNSS Data Analysis, Python, SGBD, Project Management</i>
+      </li>
+      <li>
+        <strong>Intern</strong><br>
+        IRD, Dakar, 2022 - 2023<br>
+        Responsibilities: <i>Embedded System and Software Development</i>
+      </li>
+      <li>
+        <strong>Software Developer</strong><br>
+        TEAM X, 2021 - 2023<br>
+        Responsibilities: <i>Developing and maintaining a large B2B platform for international markets (backend/frontend)</i>
+      </li>
+    </ul>
+  </section>
+
+  <section id="certificates">
+    <h2>Awards</h2>
+    <ul>
+      <li><i class="fas fa-medal"></i> Best Early Idea - International Workshop on smalltalk, 2024</li>
+    </ul>
+  </section>
+
+  <section id="papers">
+    <h2>Papers</h2>
+    <ul>
+      <li>
+            <strong>Hierarchical System of Digital Twins: A Holistic Architecture for Swarm System Analysis</strong><br>
+            MODELSWARD, Porto, Portugal, 2025<br>
+            <a href="#">[Link to Paper]</a>
+      </li>
+      <li>
+        <strong>SoSAF: A Pharo-Based Framework for Enhancing System of Systems Dependencies Analysis</strong><br>
+        ESUG Conferecne, Lille, France, [2024]<br>
+        <a href="https://hal.science/hal-04820422">[Link to Paper]</a>
+      </li>
+    </ul>
+  </section>
+
+  <section id="sponsors">
+    <h2>Collaborators</h2>
+    <div class="sponsor-slider">
+        <div class="sponsor-logos">
+            <img src="images/pharo.png" alt="Sponsor 1">
+            <img src="images/logo.png" alt="Sponsor 2">
+            <img src="images/disp.png" alt="Sponsor 3">
+            <img src="images/dga.png" alt="Sponsor 4">
+        </div>
+    </div>
+</section>
+
+<section id="carousel">
+    <h2>Gallery</h2>
+    <div class="carousel-container">
+        <div class="carousel-slide">
+            <img src="images/best05.jpg" alt="Partner 1">
+            <img src="images/best11.jpg" alt="Partner 2">
+            <img src="images/spin.jpg" alt="Partner 3">
+        </div>
+    </div>
+    <!-- Carousel Controls
+    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button> -->
+</section>
+
+
+  <footer>
+    <p>&copy; 2025 Mouhamadou F. Ball. Buid with AI.</p>
+  </footer>
+
+  <script>
+    let slideIndex = 0;
+
+    function moveSlide(step) {
+        const slides = document.querySelectorAll('.carousel-slide img');
+        slideIndex += step;
+        
+        // Ensure the index stays within the range of images
+        if (slideIndex < 0) {
+            slideIndex = slides.length - 1;
+        }
+        if (slideIndex >= slides.length) {
+            slideIndex = 0;
+        }
+        
+        const newTransformValue = -slideIndex * (slides[0].clientWidth + 20); // Adjusting width and margin
+        document.querySelector('.carousel-slide').style.transform = `translateX(${newTransformValue}px)`;
+    }
+
+  </script>
+</body>
+</html>
